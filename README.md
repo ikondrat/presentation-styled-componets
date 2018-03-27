@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-After downloading the boilerplate, your first order of business is to open a terminal and run 
+After downloading open a terminal and run 
 ```bash
 yarn
 ```
