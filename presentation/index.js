@@ -4,17 +4,12 @@ import styled, { ThemeProvider } from "styled-components";
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   Slide,
   Text,
-  Typeface,
-  CodePane,
   ComponentPlayground
 } from "spectacle";
 
@@ -25,15 +20,12 @@ const theme = createTheme({
   primary: "#1F2022"
 });
 
-const CustomCodePane = styled(CodePane)`
-  font-size: 1.2rem !important;
-  font-family: 'Fira Code';
-`;
-
 const Li = styled(ListItem)`
-  font-size: 2rem !important;
-  color: ${(props) => props.theme.colors.secondary};
-  margin-bottom: ${(props) => props.theme.distances.normal};
+  &&& {
+    font-size: 2rem;
+    color: ${(props) => props.theme.colors.secondary};
+    margin-bottom: ${(props) => props.theme.distances.normal};
+  }
 `;
 
 const LiActive = styled(Li)`
@@ -41,31 +33,27 @@ const LiActive = styled(Li)`
 `;
 
 const CustomHeader = styled(Heading)`
-  font-size: ${(props) => props.theme.fonts.large} !important;
-  padding-bottom: ${(props) => props.theme.distances.normal} !important;
-  color: ${(props) => props.theme.colors.main} !important;
-  font-family:  ${(props) => props.theme.fonts.family} !important;
+  &&& {
+    font-size: ${(props) => props.theme.fonts.large};
+    padding-bottom: ${(props) => props.theme.distances.normal};
+    color: ${(props) => props.theme.colors.main};
+    font-family:  ${(props) => props.theme.fonts.family};
+  }
 `;
 
 const LargeHeader = styled(CustomHeader)`
-  font-size: ${(props) => props.theme.fonts.xlarge} !important;
+  &&& {
+    font-size: ${(props) => props.theme.fonts.xlarge};
+  }
 `;
 
 const Description = styled(Text)`
-  color: ${(props) => props.theme.colors.main} !important;
-  font-size: ${(props) => props.theme.fonts.medium} !important;
+  &&& { 
+    color: ${(props) => props.theme.colors.main};
+    font-size: ${(props) => props.theme.fonts.medium};
+  }
 `;
 
-const Author = styled.span`
-  font-size: ${(props) => props.theme.fonts.normal} !important;
-  color: ${(props) => props.theme.colors.secondary} !important;
-`;
-
-const Email = styled(Author)`
-  color: ${(props) => props.theme.colors.yellow} !important;
-`;
-
-// hello
 export default class Presentation extends React.Component {
   render() {
     const cpProps = {
@@ -84,7 +72,6 @@ export default class Presentation extends React.Component {
           <Description>
             Short introduction
           </Description>
-          <Author>Kondrat Shmoylov <Email>kondrat.shmoylov@gmail.com</Email></Author>
         </Slide>
         <Slide transition={["fade"]} align="flex-start">
           <CustomHeader>
