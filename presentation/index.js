@@ -1,6 +1,6 @@
 // Import React
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 // Import Spectacle Core tags
 import {
@@ -22,13 +22,7 @@ import {
 import createTheme from "spectacle/lib/themes/default";
 
 const theme = createTheme({
-  primary: "#1F2022",
-  secondary: "rgba(212, 212, 212, 1)",
-  tertiary: "rgba(212, 212, 212, 1)",
-  quarternary: "#CECECE"
-}, {
-  primary: "Montserrat",
-  secondary: "Helvetica"
+  primary: "#1F2022"
 });
 
 const CustomCodePane = styled(CodePane)`
@@ -38,23 +32,37 @@ const CustomCodePane = styled(CodePane)`
 
 const Li = styled(ListItem)`
   font-size: 2rem !important;
-  color: rgba(212, 212, 212, .6);
-  margin-bottom: 1rem;
+  color: ${(props) => props.theme.colors.secondary};
+  margin-bottom: ${(props) => props.theme.distances.normal};
 `;
 
 const LiActive = styled(Li)`
-  color: rgba(212, 212, 212, 1);
+  color: ${(props) => props.theme.colors.main};
 `;
 
 const CustomHeader = styled(Heading)`
-  font-size: 3rem !important;
-  padding-bottom: 1rem;
-  color: rgba(212, 212, 212, 1);
-  font-family: 'Fira Code';
+  font-size: ${(props) => props.theme.fonts.large} !important;
+  padding-bottom: ${(props) => props.theme.distances.normal} !important;
+  color: ${(props) => props.theme.colors.main} !important;
+  font-family:  ${(props) => props.theme.fonts.family} !important;
 `;
 
-const CustomText = styled(Text)`
-  color: rgb(212, 212, 212) !important;
+const LargeHeader = styled(CustomHeader)`
+  font-size: ${(props) => props.theme.fonts.xlarge} !important;
+`;
+
+const Description = styled(Text)`
+  color: ${(props) => props.theme.colors.main} !important;
+  font-size: ${(props) => props.theme.fonts.medium} !important;
+`;
+
+const Author = styled.span`
+  font-size: ${(props) => props.theme.fonts.normal} !important;
+  color: ${(props) => props.theme.colors.secondary} !important;
+`;
+
+const Email = styled(Author)`
+  color: ${(props) => props.theme.colors.yellow} !important;
 `;
 
 // hello
@@ -62,19 +70,21 @@ export default class Presentation extends React.Component {
   render() {
     const cpProps = {
       scope: {
-        styled
+        styled,
+        ThemeProvider
       },
       theme: "dark"
     };
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["zoom"]} align="flex-start">
-          <CustomHeader>
+        <Slide transition={["zoom"]}>
+          <LargeHeader>
             Styled Components
-          </CustomHeader>
-          <CustomText>
-            short introduction
-          </CustomText>
+          </LargeHeader>
+          <Description>
+            Short introduction
+          </Description>
+          <Author>Kondrat Shmoylov <Email>kondrat.shmoylov@gmail.com</Email></Author>
         </Slide>
         <Slide transition={["fade"]} align="flex-start">
           <CustomHeader>
@@ -98,10 +108,8 @@ export default class Presentation extends React.Component {
           <CustomHeader>
             Use theme for global style definitions
           </CustomHeader>
-          <CustomCodePane
-            lang="javascript"
-            className="jscode"
-            source={require("raw-loader!../assets/theme.example")}
+          <ComponentPlayground {...cpProps}
+            code={require("raw-loader!../assets/examples/theme")}
           />
         </Slide>
         <Slide transition={["fade"]} align="flex-start">
