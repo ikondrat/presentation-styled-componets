@@ -1,0 +1,7 @@
+const Text = styled.h1`
+    font-size: 1rem;
+    font-family: 'Fira Code';
+    color: palevioletred;
+`;
+
+render(<Text>Hello</Text>);

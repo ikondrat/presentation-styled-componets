@@ -1,0 +1,20 @@
+const Article = styled.article`
+    margin: 10px;
+`;
+
+const Text = styled.h1`
+    font-size: 1rem;
+    font-family: 'Fira Code';
+    color: palevioletred;
+`;
+
+const Header = styled(Text)`
+    font-size: 3rem;
+`;
+
+render(
+    <Article>
+        <Header>I am the title of the article</Header>
+        <Text>I am the text</Text>
+    </Article>
+);

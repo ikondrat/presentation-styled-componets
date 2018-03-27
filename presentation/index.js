@@ -18,11 +18,8 @@ import {
   ComponentPlayground
 } from "spectacle";
 
-import Header from "../src/Header";
-
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
-
 
 const theme = createTheme({
   primary: "#1F2022",
@@ -63,6 +60,12 @@ const CustomText = styled(Text)`
 // hello
 export default class Presentation extends React.Component {
   render() {
+    const cpProps = {
+      scope: {
+        styled
+      },
+      theme: "dark"
+    };
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} align="flex-start">
@@ -77,24 +80,18 @@ export default class Presentation extends React.Component {
           <CustomHeader>
             Basic styling
           </CustomHeader>
-          <CustomCodePane
-            lang="javascript"
-            className="jscode"
-            source={require("raw-loader!../src/basic.example")}
+          <ComponentPlayground {...cpProps} code={
+            require("raw-loader!../assets/examples/basic")
+          }
           />
-          <ComponentPlayground theme="dark" code={require("raw-loader!../src/basic.example")}>
-            <Header/>
-          </ComponentPlayground>
-          
         </Slide>
         <Slide transition={["fade"]} align="flex-start">
           <CustomHeader>
-            Style existing component
+            Reuse existing component
           </CustomHeader>
-          <CustomCodePane
-            lang="javascript"
-            className="jscode"
-            source={require("raw-loader!../assets/grow.example")}
+          <ComponentPlayground {...cpProps} code={
+            require("raw-loader!../assets/examples/grow")
+          }
           />
         </Slide>
         <Slide transition={["fade"]} align="flex-start">

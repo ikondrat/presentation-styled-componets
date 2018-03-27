@@ -30,6 +30,10 @@ module.exports = {
       loader: "babel-loader",
       include: __dirname
     }, {
+      test: /\.example.js$/,
+      loaders: ["raw-loader"],
+      include: __dirname
+    }, {
       test: /\.css$/,
       loaders: ["style-loader", "raw-loader"],
       include: __dirname
