@@ -162,6 +162,25 @@ export default class Presentation extends React.Component {
             <LiActive>No need for 'className' and 'style' bindings</LiActive>
           </List>
         </Slide>
+        <Slide transition={["fade"]} align="flex-start">
+          <CustomHeader>
+            Cons
+          </CustomHeader>
+          <List>
+            <Li>Post processing aka Autoprefixer</Li>
+            <LiActive>Possible conflicts with already defined styles</LiActive>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} align="flex-start">
+          <CustomHeader>
+            Cons
+          </CustomHeader>
+          <List>
+            <Li>Post processing aka Autoprefixer</Li>
+            <Li>Possible conflicts with already defined styles</Li>
+            <LiActive>Possible perfomance problems for the development for the extremely large apps</LiActive>
+          </List>
+        </Slide>
       </Deck>
     );
   }
