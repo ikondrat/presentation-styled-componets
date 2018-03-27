@@ -1,14 +1,4 @@
-# Spectacle Boilerplate
-
-## Contents
-
-- [Reference](#reference)
-- [Getting Started](#getting-started)
-- [Build & Deployment](#build-deployment)
-
-## Reference
-
-The Spectacle core API is available at [https://github.com/FormidableLabs/spectacle/blob/master/README.md](https://github.com/FormidableLabs/spectacle/blob/master/README.md).
+# Short presentation about styled components
 
 ## Getting Started
 
