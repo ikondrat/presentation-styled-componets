@@ -21,6 +21,9 @@ import {
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
+import '../assets/styles.css';
+import styles from '../assets/styles.css';
+
 const theme = createTheme({
   primary: "#1F2022"
 });
@@ -71,7 +74,8 @@ export default class Presentation extends React.Component {
     const cpProps = {
       scope: {
         styled,
-        ThemeProvider
+        ThemeProvider,
+        styles
       },
       theme: "dark"
     };
@@ -85,6 +89,34 @@ export default class Presentation extends React.Component {
             Short introduction
           </Description>
           <Author>Kondrat Shmoylov <Email>kondrat.shmoylov@gmail.com</Email></Author>
+        </Slide>
+        <Slide transition={["zoom"]}>
+          <LargeHeader>
+            Before
+          </LargeHeader>
+        </Slide>
+        <Slide transition={["fade"]} align="flex-start">
+          <CustomHeader>
+            Inline
+          </CustomHeader>
+          <ComponentPlayground {...cpProps} code={
+            require("raw-loader!../assets/examples/inline")
+          }
+          />
+        </Slide>
+        <Slide transition={["fade"]} align="flex-start">
+          <CustomHeader>
+            Css stylesheet
+          </CustomHeader>
+          <ComponentPlayground {...cpProps} code={
+            require("raw-loader!../assets/examples/stylesheet")
+          }
+          />
+        </Slide>
+        <Slide transition={["zoom"]}>
+          <LargeHeader>
+            Meet Styled Components
+          </LargeHeader>
         </Slide>
         <Slide transition={["fade"]} align="flex-start">
           <CustomHeader>

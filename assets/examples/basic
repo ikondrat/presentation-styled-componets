@@ -1,7 +1,25 @@
-const Text = styled.h1`
-    font-size: 1rem;
-    font-family: 'Fira Code';
-    color: palevioletred;
+const Blockquote = styled.div`
+    text-align: left;
+    font-family: 'Fira Code', Georgia, Cambria, "Times New Roman", Times, serif;
 `;
 
-render(<Text>Hello</Text>);
+const Text = styled.div`
+    text-indent: 1rem;
+`;
+
+const Cite = styled.div`
+    font-weight: 600;
+    text-align: right;
+`;
+
+const Example = () => (
+    <Blockquote>
+        <Text>
+            It takes all the running you can do, to keep in the same place. 
+            If you want to get somewhere else, you must run at least twice as fast as that.
+        </Text>
+        <Cite>Lewis Carroll</Cite>
+    </Blockquote>
+);
+
+render(Example);

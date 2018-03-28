@@ -1,0 +1,28 @@
+const styles = {
+    blockquote: {
+        container: {
+            textAlign: 'left',
+            fontFamily: "'Fira Code', Georgia, Cambria, 'Times New Roman', Times, serif"
+        },
+        text: {
+            textIndent: '1rem'
+        },
+        cite: {
+            fontWeight: '600',
+            textAlign: 'right'
+        }
+
+    }
+};
+
+const Example = () => (
+    <div style={styles.blockquote.container}>
+        <div style={styles.blockquote.text}>
+            It takes all the running you can do, to keep in the same place. 
+            If you want to get somewhere else, you must run at least twice as fast as that.
+        </div>
+        <div style={styles.blockquote.cite}>Lewis Carroll</div>
+    </div>
+);
+
+render(Example);

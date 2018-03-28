@@ -1,0 +1,14 @@
+// import './styles.css';
+// with BEM notation
+
+const Example = () => (
+    <div className='blockquote'>
+        <div className='blockquote__text'>
+            It takes all the running you can do, to keep in the same place. 
+            If you want to get somewhere else, you must run at least twice as fast as that.
+        </div>
+        <div className='blockquote__cite'>Lewis Carroll</div>
+    </div>
+);
+
+render(Example);

@@ -1,0 +1,12 @@
+.blockquote {
+    text-align: left;
+    font-family: 'Fira Code', Georgia, Cambria, "Times New Roman", Times, serif;
+}
+.blockquote__text {
+    text-indent: 1rem;
+}
+
+.blockquote__cite {
+    font-weight: 600;
+    text-align: right;
+}
