@@ -99,7 +99,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["zoom"]}>
           <LargeHeader>
-            Meet Styled Components
+            Styled Components way
           </LargeHeader>
         </Slide>
         <Slide transition={["fade"]} align="flex-start">
@@ -141,8 +141,8 @@ export default class Presentation extends React.Component {
             Pros
           </CustomHeader>
           <List>
-            <Li>Styling components without artificial syntax</Li>
-            <LiActive>Bind style definition with defined component</LiActive>
+            <Li>Style the components without artificial syntax</Li>
+            <LiActive>Define style within the component scope</LiActive>
           </List>
         </Slide>
         <Slide transition={["fade"]} align="flex-start">
@@ -150,9 +150,9 @@ export default class Presentation extends React.Component {
             Pros
           </CustomHeader>
           <List>
-            <Li>Styling components without artificial syntax</Li>
-            <Li>Bind style definition with defined component</Li>
-            <LiActive>There is no additional and redundant 'style' file</LiActive>
+            <Li>Style the components without artificial syntax</Li>
+            <Li>Define style within the component scope</Li>
+            <LiActive>No additional and redundant 'style' file</LiActive>
           </List>
         </Slide>
         <Slide transition={["fade"]} align="flex-start">
@@ -160,10 +160,10 @@ export default class Presentation extends React.Component {
             Pros
           </CustomHeader>
           <List>
-            <Li>Styling components without artificial syntax</Li>
-            <Li>Bind style definition with defined component</Li>
-            <Li>There is no additional and redundant 'style' file</Li>
-            <LiActive>There is no redundant and unused styles</LiActive>
+            <Li>Style the components without artificial syntax</Li>
+            <Li>Define style within the component scope</Li>
+            <Li>No additional and redundant 'style' file</Li>
+            <LiActive>No redundant and unused styles</LiActive>
           </List>
         </Slide>
         <Slide transition={["fade"]} align="flex-start">
@@ -171,10 +171,10 @@ export default class Presentation extends React.Component {
             Pros
           </CustomHeader>
           <List>
-            <Li>Styling components without artificial syntax</Li>
-            <Li>Bind style definition with defined component</Li>
-            <Li>There is no additional and redundant 'style' file</Li>
-            <Li>There is no redundant and unused styles</Li>
+            <Li>Style the components without artificial syntax</Li>
+            <Li>Define style within the component scope</Li>
+            <Li>No additional and redundant 'style' file</Li>
+            <Li>No redundant and unused styles</Li>
             <LiActive>No need for 'className' and 'style' bindings</LiActive>
           </List>
         </Slide>
@@ -184,7 +184,7 @@ export default class Presentation extends React.Component {
           </CustomHeader>
           <List>
             <Li>Post processing aka Autoprefixer</Li>
-            <LiActive>Possible conflicts with already defined styles</LiActive>
+            <LiActive>Probability if conflicts with already defined styles</LiActive>
           </List>
         </Slide>
         <Slide transition={["fade"]} align="flex-start">
@@ -193,9 +193,14 @@ export default class Presentation extends React.Component {
           </CustomHeader>
           <List>
             <Li>Post processing aka Autoprefixer</Li>
-            <Li>Possible conflicts with already defined styles</Li>
-            <LiActive>Possible perfomance problems for the development for the extremely large apps</LiActive>
+            <Li>Probability if conflicts with already defined styles</Li>
+            <LiActive>Probable perfomance problems for the development for the extremely large apps</LiActive>
           </List>
+        </Slide>
+        <Slide transition={["zoom"]}>
+          <LargeHeader>
+            Questions?
+          </LargeHeader>
         </Slide>
       </Deck>
     );
