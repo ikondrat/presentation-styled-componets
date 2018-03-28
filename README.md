@@ -1,8 +1,13 @@
-# Short presentation about styled components
+# Styled components intro
+Short introduction about styled components as the new way to style your React application
+
+## Prerequesites
+You need to have 
+ * [LTS Node.js/npm](https://nodejs.org/en/download/) 
+ * [git](https://git-scm.com/downloads).
 
 ## Getting Started
-
-After downloading open a terminal and run 
+After cloning the repo open a terminal and run 
 ```bash
 yarn
 ```
