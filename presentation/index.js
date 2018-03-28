@@ -30,7 +30,9 @@ const Li = styled(ListItem)`
 `;
 
 const LiActive = styled(Li)`
-  color: ${(props) => props.theme.colors.main};
+  &&& {
+    color: ${(props) => props.theme.colors.main};
+  }
 `;
 
 const CustomHeader = styled(Heading)`
@@ -133,7 +135,7 @@ export default class Presentation extends React.Component {
             Pros
           </CustomHeader>
           <List>
-            <LiActive>Styling components without artificial syntax</LiActive>
+            <Li>Style the components without artificial syntax</Li>
           </List>
         </Slide>
         <Slide transition={["fade"]} align="flex-start">
@@ -183,8 +185,7 @@ export default class Presentation extends React.Component {
             Cons
           </CustomHeader>
           <List>
-            <Li>Post processing aka Autoprefixer</Li>
-            <LiActive>Probability if conflicts with already defined styles</LiActive>
+            <LiActive>Post processing aka Autoprefixer</LiActive>
           </List>
         </Slide>
         <Slide transition={["fade"]} align="flex-start">
@@ -193,9 +194,23 @@ export default class Presentation extends React.Component {
           </CustomHeader>
           <List>
             <Li>Post processing aka Autoprefixer</Li>
-            <Li>Probability if conflicts with already defined styles</Li>
-            <LiActive>Probable perfomance problems for the development for the extremely large apps</LiActive>
+            <LiActive>Probability of conflicts with already defined styles</LiActive>
           </List>
+        </Slide>
+        <Slide transition={["fade"]} align="flex-start">
+          <CustomHeader>
+            Cons
+          </CustomHeader>
+          <List>
+            <Li>Post processing aka Autoprefixer</Li>
+            <Li>Probability of conflicts with already defined styles</Li>
+            <LiActive>Perfomance problems if you have extremely large app</LiActive>
+          </List>
+        </Slide>
+        <Slide transition={["zoom"]}>
+          <LargeHeader>
+            Alternatives?
+          </LargeHeader>
         </Slide>
         <Slide transition={["zoom"]}>
           <LargeHeader>
