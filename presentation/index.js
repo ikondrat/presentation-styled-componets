@@ -16,9 +16,7 @@ import {
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
-import '../assets/styles.css';
-import styles from '../assets/styles.css';
-
+import "../assets/styles.css";
 const theme = createTheme({
   primary: "#1F2022"
 });
@@ -62,8 +60,7 @@ export default class Presentation extends React.Component {
     const cpProps = {
       scope: {
         styled,
-        ThemeProvider,
-        styles
+        ThemeProvider
       },
       theme: "dark"
     };
